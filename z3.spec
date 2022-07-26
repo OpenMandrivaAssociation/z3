@@ -3,10 +3,10 @@
 %define devname %mklibname z3 -d
 
 Name:		z3
-Version:	4.8.8
+Version:	4.10.1
 Release:	1
 Summary:	The Z3 Theorem Prover
-Source0:	https://github.com/Z3Prover/z3/archive/z3-%{version}.tar.gz
+Source0:	https://github.com/Z3Prover/z3/archive/z3-z3-%{version}.tar.gz
 License:	MIT
 Requires:	%{libname} = %{EVRD}
 BuildRequires:	cmake
@@ -55,3 +55,4 @@ Development files for the Z3 Theorem Prover
 %{_libdir}/libz3.so
 %{_includedir}/*.h
 %{_libdir}/cmake/z3
+%{_libdir}/pkgconfig/z3.pc
