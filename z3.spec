@@ -55,3 +55,4 @@ Development files for the Z3 Theorem Prover
 %{_libdir}/libz3.so
 %{_includedir}/*.h
 %{_libdir}/cmake/z3
+%{_libdir}/pkgconfig/z3.pc
