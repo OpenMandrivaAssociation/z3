@@ -3,7 +3,7 @@
 %define devname %mklibname z3 -d
 
 Name:		z3
-Version:	4.10.1
+Version:	4.11.2
 Release:	1
 Summary:	The Z3 Theorem Prover
 Source0:	https://github.com/Z3Prover/z3/archive/z3-z3-%{version}.tar.gz
