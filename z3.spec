@@ -4,7 +4,7 @@
 
 Name:		z3
 Version:	4.12.1
-Release:	1
+Release:	2
 Summary:	The Z3 Theorem Prover
 Source0:	https://github.com/Z3Prover/z3/archive/z3-z3-%{version}.tar.gz
 License:	MIT
