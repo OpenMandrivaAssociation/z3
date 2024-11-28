@@ -1,12 +1,13 @@
 %define major %(echo %{version} |cut -d. -f1)
-%define libname %mklibname z3 %{major}
+%define oldlibname %mklibname z3 4
+%define libname %mklibname z3
 %define devname %mklibname z3 -d
 
 Name:		z3
-Version:	4.12.2
+Version:	4.13.3
 Release:	1
 Summary:	The Z3 Theorem Prover
-Source0:	https://github.com/Z3Prover/z3/archive/z3-z3-%{version}.tar.gz
+Source0:	https://github.com/Z3Prover/z3/archive/refs/tags/z3-%{version}.tar.gz
 License:	MIT
 Requires:	%{libname} = %{EVRD}
 BuildRequires:	cmake
@@ -23,6 +24,8 @@ and predicate abstraction.
 %package -n %{libname}
 Summary:	Library for the Z3 Theorem Prover
 Group:		System/Libraries
+# Renamed before 6.0
+%rename %{oldlibname}
 
 %description -n %{libname}
 Library for the Z3 Theorem Prover
