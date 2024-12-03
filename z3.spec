@@ -3,9 +3,14 @@
 %define libname %mklibname z3
 %define devname %mklibname z3 -d
 
+# z3's cmake files generate dependencies on cmake(GMP)
+# [which is provided by KDE 5's KDELibs4Support, not as you may think GMP]
+# and cmake(Threads) which is provided by cmake, not glibc...
+%define __requires_exclude .*cmake.*
+
 Name:		z3
 Version:	4.13.3
-Release:	1
+Release:	2
 Summary:	The Z3 Theorem Prover
 Source0:	https://github.com/Z3Prover/z3/archive/refs/tags/z3-%{version}.tar.gz
 License:	MIT
@@ -33,6 +38,9 @@ Library for the Z3 Theorem Prover
 %package -n %{devname}
 Summary:	Development files for the Z3 Theorem Prover
 Group:		Development/C
+# In place of the cmake(GMP) requirements
+# we filter out with __requires_exclude
+Requires:	pkgconfig(gmp)
 
 %description -n %{devname}
 Development files for the Z3 Theorem Prover
