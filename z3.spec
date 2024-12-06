@@ -10,7 +10,7 @@
 
 Name:		z3
 Version:	4.13.3
-Release:	2
+Release:	3
 Summary:	The Z3 Theorem Prover
 Source0:	https://github.com/Z3Prover/z3/archive/refs/tags/z3-%{version}.tar.gz
 License:	MIT
@@ -41,6 +41,7 @@ Group:		Development/C
 # In place of the cmake(GMP) requirements
 # we filter out with __requires_exclude
 Requires:	pkgconfig(gmp)
+Requires:	%{libname} = %{EVRD}
 
 %description -n %{devname}
 Development files for the Z3 Theorem Prover
