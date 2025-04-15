@@ -9,8 +9,8 @@
 %define __requires_exclude .*cmake.*
 
 Name:		z3
-Version:	4.13.3
-Release:	3
+Version:	4.14.1
+Release:	1
 Summary:	The Z3 Theorem Prover
 Source0:	https://github.com/Z3Prover/z3/archive/refs/tags/z3-%{version}.tar.gz
 License:	MIT
