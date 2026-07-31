@@ -9,8 +9,8 @@
 %define __requires_exclude .*cmake.*
 
 Name:		z3
-Version:	4.13.3
-Release:	3
+Version:	5.0.0
+Release:	1
 Summary:	The Z3 Theorem Prover
 Source0:	https://github.com/Z3Prover/z3/archive/refs/tags/z3-%{version}.tar.gz
 License:	MIT
@@ -47,7 +47,7 @@ Requires:	%{libname} = %{EVRD}
 Development files for the Z3 Theorem Prover
 
 %prep
-%autosetup -p1 -n z3-z3-%{version}
+%autosetup -p1 -n z3-z3-5.0.0
 %cmake \
 	-G Ninja
 
